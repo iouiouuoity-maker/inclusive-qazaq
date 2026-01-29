@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Әдебиет — Комикстер</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a class="logo" href="index.html" aria-label="Басты бет">←</a>
+      <div>
+        <h1>Әдебиет</h1>
+        <p class="sub">Комикс → тыңдау → қысқа тапсырмалар (стресссіз)</p>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn" data-font="minus">A−</button>
+      <button class="btn" data-font="plus">A+</button>
+      <button class="btn" id="toggleMotion">Анимация: ON</button>
+      <button class="btn" id="toggleAudio">Дыбыс: ON</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 id="comicTitle">Комикс</h2>
+
+      <div class="row" style="margin: 8px 0 10px;">
+        <span class="muted">Комиксті таңда:</span>
+        <select id="comicSelect" aria-label="Комиксті таңда"></select>
+        <span class="small">Бір кадр — бір сөйлем.</span>
+      </div>
+
+      <div class="stage">
+        <div class="stageInner" id="comicStage" aria-label="Комикс кадры"></div>
+      </div>
+
+      <div class="row" style="margin-top:10px;">
+        <button class="pill" id="prev">◀ Алдыңғы</button>
+        <button class="pill" id="play">▶ Ойнату</button>
+        <button class="pill" id="next">Келесі ▶</button>
+        <span class="muted" id="counter">1/6</span>
+      </div>
+
+      <div class="captionBox" style="margin-top:10px;">
+        <h3 id="caption">…</h3>
+        <button class="pill" id="speak">🔊 Тыңдау</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Тапсырмалар</h2>
+
+      <div class="card" style="background: rgba(255,255,255,.04);">
+        <h3 id="q1title">1) …</h3>
+        <div class="row" id="q1"></div>
+        <p class="muted" id="q1msg"></p>
+      </div>
+
+      <div class="card" style="background: rgba(255,255,255,.04);">
+        <h3 id="q2title">2) …</h3>
+        <div class="row" id="q2"></div>
+        <p class="muted" id="q2msg"></p>
+      </div>
+
+      <div class="card" style="background: rgba(255,255,255,.04);">
+        <h3 id="q3title">3) …</h3>
+        <p class="muted">Сөздерді басып, сөйлемді жина.</p>
+        <div class="row" id="q3words"></div>
+
+        <div class="captionBox" style="margin-top:10px;">
+          <h3 id="q3result">…</h3>
+          <button class="pill" id="q3clear">Тазарту</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Комикс — мәтінді түсінуге көпір. Қате жоқ, тек қайталау бар.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
