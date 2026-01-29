@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Қазақ тілі — 7–8</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <a class="logo" href="index.html" aria-label="Басты бет">←</a>
+    <div>
+      <h1>Қазақ тілі (7–8)</h1>
+      <p class="sub">Бағдарламаға сай: сөз таптары • сөйлем • мәтін</p>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn" data-font="minus">A−</button>
+    <button class="btn" data-font="plus">A+</button>
+    <button class="btn" id="toggleMotion">Анимация: ON</button>
+    <button class="btn" id="toggleAudio">Дыбыс: ON</button>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Қысқа модуль</h2>
+    <div class="row" style="margin-top:8px;">
+      <button class="pill" id="qtPrev">◀</button>
+      <button class="pill" id="qtSpeak">🔊</button>
+      <button class="pill" id="qtNext">▶</button>
+      <span class="muted">Күйзеліссіз: қайта таңдауға болады</span>
+    </div>
+
+    <h3 id="qtTitle" style="margin-top:12px;">…</h3>
+    <div class="row" id="qtWords"></div>
+    <p class="muted" id="qtMsg"></p>
+  </section>
+
+  <section class="card">
+    <h2>Сөйлем құрастыру</h2>
+    <p class="muted">Сөздерді бас → сөйлем құрастыр → тыңда.</p>
+    <div class="row" id="qtSentenceWords"></div>
+
+    <div class="captionBox" style="margin-top:10px;">
+      <h3 id="qtSentenceResult">…</h3>
+      <button class="pill" id="qtClear">Тазарту</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <small>Ереже аз, тәжірибе көп: қысқа, түсінікті, қайталауға ыңғайлы.</small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
